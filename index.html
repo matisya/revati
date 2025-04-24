@@ -43,7 +43,7 @@ body {
 }
 
 
-.slide:first-child(1) {
+.slide:first-child {
   background: url("1.png") no-repeat
     center top/cover;
 }
@@ -52,9 +52,6 @@ body {
   background: url("2.png") no-repeat
     center top/cover;
 }
-
-
-
 
 .buttons button#prev {
   position: absolute;
@@ -108,7 +105,6 @@ body {
   <div class="slider">
     <div class="slide current"></div>
     <div class="slide"></div>
-    <div class="slide"></div>
 
   </div>
   <div class="buttons">
@@ -120,7 +116,7 @@ body {
     const slides = document.querySelectorAll(".slide");
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
-    const auto = false;
+    const auto = true;
     const intervalTime = 5000;
     let slideInterval;
 
